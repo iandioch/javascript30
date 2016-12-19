@@ -5,4 +5,14 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<audio data-key="65" src="sounds/wub.ogg"></audio>
+
+	<script type="text/javascript">
+		window.addEventListener('keydown', function(e) {
+			console.log(e.keyCode);
+			const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+			console.log(audio);
+			audio.play();
+		});
+	</script>
 </body>
