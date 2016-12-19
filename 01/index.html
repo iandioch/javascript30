@@ -31,6 +31,7 @@
 	<script type="text/javascript">
 		window.addEventListener('keydown', function(e) {
 			const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+			if (!audio) return; // no matching sound
 			const div = document.querySelector(`.key[data-key="${e.keyCode}"]`);
 			audio.currentTime = 0;
 			audio.play();
